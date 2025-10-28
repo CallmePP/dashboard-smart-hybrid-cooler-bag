@@ -1,8 +1,8 @@
-// ================== Import Firebase ==================
+//Import Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-// ================== Firebase Config ==================
+//Firebase Config
 const firebaseConfig = {
   apiKey: "AIzaSyCxJmsRjuVsPEiM4Xue-IRI3gHxVfMEfks",
   authDomain: "lsc-sit.firebaseapp.com",
@@ -17,10 +17,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// ================== ตั้งวันที่ปัจจุบัน ==================
+//วันที่ปัจจุบัน
 document.getElementById("date").innerText = new Date().toLocaleDateString('th-TH');
 
-// ================== ฟังก์ชันตรวจสถานะ ==================
+//ฟังก์ชันตรวจสถานะ
 function getTempStatus(temp) {
   if (temp >= 2 && temp <= 8) {
     return { text: "ปกติ", class: "status-normal" };
@@ -37,7 +37,7 @@ function getHumidityStatus(humidity) {
   }
 }
 
-// ================== Chart.js ==================
+//Chart.js
 const ctx = document.getElementById('dataChart').getContext('2d');
 const myChart = new Chart(ctx, {
   type: 'line',
@@ -75,7 +75,7 @@ const myChart = new Chart(ctx, {
   }
 });
 
-// ================== ดึงข้อมูลจาก Firebase ==================
+// ดึงข้อมูลจาก Firebase
 const sensorRef = ref(database, "sensor/data");
 
 onValue(sensorRef, (snapshot) => {
