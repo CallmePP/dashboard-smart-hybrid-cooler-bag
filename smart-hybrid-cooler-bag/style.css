@@ -45,7 +45,6 @@ h1 {
   font-weight: bold;
 }
 
-/* กราฟ */
 .graph-section {
   background: rgba(0,0,0,0.4);
   margin-top: 20px;
@@ -57,13 +56,12 @@ h1 {
   max-height: 300px;
 }
 
-/* Status Colors */
 .status-normal {
-  color: #2ecc71; /* เขียว */
+  color: #2ecc71; 
 }
 .status-warning {
-  color: #f39c12; /* ส้ม */
+  color: #f39c12; 
 }
 .status-danger {
-  color: #e74c3c; /* แดง */
+  color: #e74c3c; 
 }
