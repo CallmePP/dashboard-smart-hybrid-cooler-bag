@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('man.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  color: #b3e0ff;
+  font-size: 3em;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.info-box, .status-box {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.value {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.status-box p {
+  font-size: 1.5em;
+}
+
+.status-text {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* กราฟ */
+.graph-section {
+  background: rgba(0,0,0,0.4);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+#dataChart {
+  width: 100% !important;
+  max-height: 300px;
+}
+
+/* Status Colors */
+.status-normal {
+  color: #2ecc71; /* เขียว */
+}
+.status-warning {
+  color: #f39c12; /* ส้ม */
+}
+.status-danger {
+  color: #e74c3c; /* แดง */
+}
